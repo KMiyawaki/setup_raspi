@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=display change
+Comment=display change
+Exec=lxterminal -e "~/setup_raspi/monitors.sh -s; sleep 3"
+Icon=oit_display_change
+Terminal=false
