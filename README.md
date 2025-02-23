@@ -110,6 +110,7 @@ sudo emacs usercfg.txt -nw
 # configuration files on the boot partition.
 
 dtoverlay=uart2
+dtoverlay=uart5
 dtoverlay=vc4-fkms-v3d
 # dtoverlay=vc4-kms-v3d # この設定では音声出力できない。
 disable_overscan=1
@@ -343,6 +344,7 @@ pactl info
 次のコマンドで音声出力を確認する。
 
 ```shell
+sudo apt install alsa-utils
 speaker-test -t wav -c 2
 ```
 
