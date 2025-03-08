@@ -148,7 +148,8 @@ hdmi_cvt 1024 600 60 6 0 0 0
 その後、`:~/.config/lxpanel/LXDE/panels/left`などというファイルが生成されているはずなので、そこに以下をペーストする。
 これは最初から存在しているタスクバーの設定（`panel`というファイル）をほぼコピーしたものである。
 
-違いは`monitor=1`の部分だけである。
+違いは`monitor=1`の部分と`Plugin { type=tray`がないことである。
+`Plugin { type=tray`はネットワーク設定などのアプレットが入っているが、これは複数モニタがあっても一つにしか表示できないようである。
 
 ```txt
 Global {
@@ -277,11 +278,6 @@ Plugin {
     VolumeMuteKey=XF86AudioMute
     VolumeDownKey=XF86AudioLowerVolume
     VolumeUpKey=XF86AudioRaiseVolume
-  }
-}
-Plugin {
-  type=tray
-  Config {
   }
 }
 Plugin {
