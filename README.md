@@ -344,8 +344,11 @@ sudo apt install alsa-utils
 speaker-test -t wav -c 2
 ```
 
-軽量なエディタ`geany`をインストールする。`Raspberry pi4`で`VS Code`を動かすのは重過ぎる。
+他に必要なソフトをインストールする。
+- 軽量なエディタ`geany`。`Raspberry pi4`で`VS Code`を動かすのは重過ぎる。
+- メモ帳代わりの`gedit`。
+- 画像処理アプリの`gimp`。
 
 ```shell
-sudo apt install -y geany
+sudo apt install -y geany gedit gimp
 ```
