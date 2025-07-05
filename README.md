@@ -103,6 +103,13 @@ sudo apt install alsa-utils
 speaker-test -t wav -c 2
 ```
 
+## カメラ
+
+```shell
+./install_picamera.sh
+sudo pip install picamera2
+```
+
 ## その他の設定
 
 `PCManFM`ファイルマネージャの設定から、ショートカットダブルクリック時に選択肢を出さないように設定する。
