@@ -87,10 +87,10 @@ sudo emacs config.txt -nw
 enable_uart=1
 dtoverlay=uart1-pi5
 dtoverlay=uart4-pi5
-
-arm_freq=2800
-gpu_freq=1000
-over_voltage_delta=50000
+# 以下、オーバークロックしたいなら有効にする。ただし、モバイルバッテリーでは不安定になる。
+# arm_freq=2800
+# gpu_freq=1000
+# over_voltage_delta=50000
 ```
 
 音声用設定は特に不要。
