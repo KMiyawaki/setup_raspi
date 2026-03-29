@@ -4,8 +4,9 @@
 
 ## Ubuntu と LXDE のインストール
 
-[`Raspberry Pi Imager`](https://www.raspberrypi.com/software/)では`Wifi`設定なしで`SD`カードに書き込む。
-`OS`は`Ubuntu20.04 64bit`サーバを選択する。
+[https://cdimage.ubuntu.com/releases/20.04/release/](Preinstalled server image Raspberry Pi Generic (64-bit ARM) preinstalled server image)をダウンロードする。
+`Raspberry Pi Imager`](https://www.raspberrypi.com/software/)で`Custom image`を選択して`SD`カードに書き込む。
+初期パスワード変更が必要なので準備しておく。
 
 有線`LAN`に接続し、起動後に以下を実行する。
 
