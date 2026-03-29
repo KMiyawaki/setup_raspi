@@ -11,6 +11,10 @@
 有線`LAN`に接続し、起動後に以下を実行する。
 
 ```shell
+# もしもユーザをpiに変えたいなら
+sudo adduser pi
+sudo usermod -aG sudo pi
+# 再起動してログインしなおす。
 sudo apt update
 sudo apt upgrade
 sudo apt autoremove -y
