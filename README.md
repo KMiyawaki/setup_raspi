@@ -17,7 +17,12 @@ sudo apt upgrade
 sudo apt autoremove -y
 sudo apt install net-tools emacs git
 sudo apt install -y lxqt
+# lxqtのインストールで失敗する場合は
+# sudo apt install aptitude
+# sudo aptitude install lxqt
+# 最初の質問には n を選択し、次にダウングレードの提案があるので受け入れる。
 sudo apt install -y lightdm
+# lightdmで起動に失敗する場合はsddmに戻す。
 sudo apt purge -y gdm3
 sudo reboot
 # ログイン時に`lxqt`を選択すること。
