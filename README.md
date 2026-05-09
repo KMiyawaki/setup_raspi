@@ -28,6 +28,27 @@ sudo reboot
 # ログイン時に`lxqt`を選択すること。
 ```
 
+## NetworkManager
+
+もしも、システムトレイのネットワークツールでWifiが検索できない場合、以下のファイルを編集する。
+
+```shell
+cd /etc/netplan/
+ls
+50-cloud-init.yaml # これを編集する。
+sudo emacs 50-cloud-init.yaml -nw
+```
+
+以下のように追記する。
+
+```text
+network:
+  version: 2
+  renderer: NetworkManager  # この行を追加
+```
+
+`sudo netplan apply`を実行する。
+
 ## 日本語化
 
 ```shell
