@@ -78,6 +78,8 @@ chmod 600 ~/.ssh/authorized_keys
 
 ## 自動ログイン設定
 
+### lightdmの場合
+
 ```shell
 sudo emacs /etc/lightdm/lightdm.conf.d/50-myconfig.conf -nw
 ```
@@ -89,6 +91,17 @@ sudo emacs /etc/lightdm/lightdm.conf.d/50-myconfig.conf -nw
 autologin-user=pi
 autologin-user-timeout=0
 user-session=LXQt
+```
+
+### sddmの場合
+
+```shell
+sudo mkdir -p /etc/sddm.conf.d/
+sudo emacs /etc/sddm.conf.d/autologin.conf -nw
+# 以下を書き込んで再起動する。
+[Autologin]
+User=pi
+Session=lxqt
 ```
 
 ## VNC
