@@ -4,10 +4,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/x11vnc -auth guess -display :0 -rfbauth /etc/.vncpasswd -rfbport 5900 -forever -loop -noxdamage -repeat -shared
-ExecStop=/bin/kill -TERM $MAINPID
-ExecReload=/bin/kill -HUP $MAINPID
-KillMode=control-group
+ExecStart=/bin/bash -c "/usr/bin/x11vnc -auth $(ls /var/run/sddm/xauth_* 2>/dev/null || ls /var/run/lightdm/root/:0 2>/dev/null || echo guess) -display :0 -rfbauth /etc/.vncpasswd -rfbport 5900 -forever -loop -noxdamage -repeat -shared"
 Restart=on-failure
 
 [Install]
